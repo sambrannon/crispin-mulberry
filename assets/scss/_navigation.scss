@@ -1,6 +1,6 @@
 .site-nav {
 
-    font-size: 1.4rem;
+    font-size: 14px;
     text-shadow: 1px 1px $white;
 
     li {
@@ -10,7 +10,7 @@
     // scss-lint:disable all
     a {
         display: block;
-        padding: 1rem;
+        padding: 10px;
         color: $gray3;
         // gradient generated with "Gradient" app (http://www.gradientapp.com/)
         background-color: #fefefe;

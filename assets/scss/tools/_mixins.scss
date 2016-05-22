@@ -8,7 +8,7 @@
 
 //** CLEARFIX *********************/
 @mixin clearfix {
-    &::after {
+    &:after { // modified to be single-colon for IE8 compatibility
         clear: both;
         content: '';
         display: table;

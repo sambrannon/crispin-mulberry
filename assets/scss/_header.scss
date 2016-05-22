@@ -1,8 +1,17 @@
 .site-header {
 
+    @include clearfix;
+
     &__logo {
+
         display: block;
-        padding: 2rem;
+        padding: 20px;
+
+        @include media-query($break1) {
+            float: left;
+            padding: 30px 0;
+        }
+
     }
 
     &__logo-img {
@@ -16,11 +25,41 @@
 
 .account-links {
 
-    font-size: 1.4rem;
+    font-size: 14px;
+
+    @include media-query($break1) {
+        float: right;
+        font-size: 13px;
+        margin-top: 90px;
+    }
 
     li {
+
         border-top: solid 1px darken($blue2, 7%);
         text-align: center;
+
+        @include media-query($break1) {
+
+            border: 0;
+            display: inline-block;
+
+            &:after {
+                background-color: $white;
+                content: '';
+                display: inline-block;
+                height: 18px;
+                margin: 0 8px 0 14px;
+                position: relative;
+                top: 4px;
+                width: 1px;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+
+        }
+
     }
 
     a {
@@ -28,10 +67,23 @@
         background-color: darken($blue2, 5%);
         color: $white;
         display: block;
-        padding: 1rem;
+        padding: 10px;
+
+        @include media-query($break1) {
+            background-color: transparent;
+            display: inline-block;
+            padding: 0;
+        }
 
         &:hover {
+
             background-color: darken($blue2, 3%);
+
+            @include media-query($break1) {
+                background-color: transparent;
+                text-decoration: underline;
+            }
+
         }
 
     }
