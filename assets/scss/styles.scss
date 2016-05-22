@@ -1,2 +1,12 @@
-@import "reset";
-@import "screen";
+// Tools
+@import 'tools/variables';
+@import 'tools/mixins';
+// Styles
+@import 'reset';
+@import 'base';
+@import 'layout';
+@import 'carousel';
+@import 'header';
+@import 'footer';
+@import 'lists';
+@import 'navigation';

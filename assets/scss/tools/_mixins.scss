@@ -1,0 +1,32 @@
+// scss-lint:disable VendorPrefix
+// Media Queries
+@mixin media-query($device) {
+    @media screen and (min-width: $device) {
+        @content;
+    }
+}
+
+//** CLEARFIX *********************/
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: '';
+        display: table;
+    }
+}
+
+//** TRUNCATE *********************/
+@mixin truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+//** FULLSCREEN *********************/
+@mixin absolute-full($size) {
+    position: absolute;
+    top: $size;
+    right: $size;
+    bottom: $size;
+    left: $size;
+}

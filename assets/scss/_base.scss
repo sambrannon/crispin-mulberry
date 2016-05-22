@@ -1,0 +1,31 @@
+html {
+    font-size: 62.5%; // "reset" font size from default of 16px to 10px for easier (r)em-ing
+}
+
+body {
+    background-color: $blue2;
+    font-family: "Helvetica", Arial, sans-serif;
+    font-size: 1.3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.site-hd {
+    padding: 20px;
+}
+
+.site-nav {
+    background-color: $gray2;
+}
+
+.site-bd {
+    background-color: $white;
+    padding: 18px;
+}
+
+.site-ft {
+    background-color: $black;
+    padding: 18px;
+}

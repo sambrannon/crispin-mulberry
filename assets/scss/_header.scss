@@ -1,0 +1,39 @@
+.site-header {
+
+    &__logo {
+        display: block;
+        padding: 2rem;
+    }
+
+    &__logo-img {
+        display: block;
+        height: auto;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+}
+
+.account-links {
+
+    font-size: 1.4rem;
+
+    li {
+        border-top: solid 1px darken($blue2, 7%);
+        text-align: center;
+    }
+
+    a {
+
+        background-color: darken($blue2, 5%);
+        color: $white;
+        display: block;
+        padding: 1rem;
+
+        &:hover {
+            background-color: darken($blue2, 3%);
+        }
+
+    }
+
+}

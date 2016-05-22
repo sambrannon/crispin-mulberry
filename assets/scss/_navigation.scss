@@ -1,0 +1,28 @@
+.site-nav {
+
+    font-size: 1.4rem;
+    text-shadow: 1px 1px $white;
+
+    li {
+        text-align: center;
+    }
+
+    // scss-lint:disable all
+    a {
+        display: block;
+        padding: 1rem;
+        color: $gray3;
+        // gradient generated with "Gradient" app (http://www.gradientapp.com/)
+        background-color: #fefefe;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(254, 254, 254)), to(rgb(208, 208, 208)));
+        background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        background-image: -moz-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        background-image: -o-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        background-image: -ms-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        background-image: linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fefefe', EndColorStr='#d0d0d0');
+
+    }
+    // scss-lint:enable all
+
+}
