@@ -30,3 +30,33 @@
     bottom: $size;
     left: $size;
 }
+
+//Prefixes definition
+$webkit:true;
+$o:true;
+$moz:true;
+$w3:true;
+$ms:true;
+
+//Gradient Mixin
+@mixin gradient($mode, $direction, $from, $to, $old-direction:null) {
+
+    @if $webkit == true {
+        @if($old-direction != null){
+            background-image: -webkit-gradient($mode, #{$old-direction}, from($from), to($to));
+        }
+        background-image: -webkit-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $moz == true {
+        background-image: -moz-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $o == true {
+        background-image: -o-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $ms == true {
+        background-image: -ms-#{$mode}-gradient($direction, $from, $to);
+    }
+    @if $w3 == true {
+        background-image: #{$mode}-gradient($direction, $from, $to);
+    }
+}

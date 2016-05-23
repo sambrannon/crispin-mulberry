@@ -1,28 +1,79 @@
 .site-nav {
 
+    @include clearfix;
     font-size: 14px;
     text-shadow: 1px 1px $white;
 
+    @include media-query($break1) {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
     li {
+
         text-align: center;
+
+        @include media-query($break1) {
+            display: block;
+            float: left;
+            width: 16%;
+        }
+
+        &.active {
+
+            @include media-query($break1) {
+
+                width: 20%;
+
+                // scss-lint:disable NestingDepth
+                a {
+                    background: $white;
+                    border: solid 1px $gray1;
+                    border-bottom: solid 1px $white;
+                    height: 15px;
+                    line-height: 1.6;
+                    margin-top: -4px;
+                }
+                // scss-lint:enable NestingDepth
+
+            }
+
+        }
+
     }
 
-    // scss-lint:disable all
     a {
-        display: block;
-        padding: 10px;
-        color: $gray3;
+
         // gradient generated with "Gradient" app (http://www.gradientapp.com/)
+        // scss-lint:disable all
+        // disabling just because the generated code doesn't fit the project's linting structure very well
         background-color: #fefefe;
-        background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(254, 254, 254)), to(rgb(208, 208, 208)));
-        background-image: -webkit-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
-        background-image: -moz-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
-        background-image: -o-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
-        background-image: -ms-linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
-        background-image: linear-gradient(top, rgb(254, 254, 254), rgb(208, 208, 208));
+        @include gradient(linear,top,rgb(254, 254, 254),rgb(208, 208, 208),'left top, left bottom');
+        color: $gray3;
+        display: block;
         filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#fefefe', EndColorStr='#d0d0d0');
+        // scss-lint:enable all
+        padding: 10px;
+        text-transform: uppercase;
+
+        @include media-query($break1) {
+
+            border-bottom: solid 1px $gray1;
+            display: block;
+            height: 12px;
+            line-height: 1.2;
+            padding: 18px 10px;
+
+            &:hover {
+                // scss-lint:disable all
+                background-color: #e1e3e6;
+                @include gradient(linear,top,rgb(225, 227, 230),rgb(189, 189, 189),'left top, left bottom');
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#e1e3e6', EndColorStr='#bdbdbd');
+                // scss-lint:enable all
+            }
+
+        }
 
     }
-    // scss-lint:enable all
 
 }

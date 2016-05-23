@@ -1,10 +1,38 @@
-// .carousel-item_isInactive {
-//     position: absolute;
-//     left: -9999px;
-//     line-height: 0;
-// }
-//
-// .carousel-item_isActive {
-//     position: static;
-//     left: 0;
-// }
+.carousel {
+
+    position: relative;
+
+    &__items {
+
+        @include media-query($break1) {
+            float: left;
+            padding-top: 41.805%; //use % to be more responsive
+            position: relative;
+            width: 666px;
+        }
+
+    }
+
+    &__item {
+
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+
+        &--active {
+            opacity: 1;
+        }
+
+        &--inactive {
+            opacity: 0;
+        }
+
+    }
+
+    &__image {
+        display: block;
+    }
+
+}

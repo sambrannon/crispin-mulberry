@@ -23,8 +23,8 @@ $(function() {
      * @final
      */
     var CLASSES = {
-        ACTIVE_SLIDE_CLASS: 'carousel-item_isActive',
-        INACTIVE_SLIDE_CLASS: 'carousel-item_isInactive'
+        ACTIVE_SLIDE_CLASS: 'carousel__item--active',
+        INACTIVE_SLIDE_CLASS: 'carousel__item--inactive'
     };
 
     /**

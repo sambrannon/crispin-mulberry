@@ -1,0 +1,5 @@
+.site-body {
+    @include clearfix;
+    background-color: $white;
+    padding: 18px;
+}
